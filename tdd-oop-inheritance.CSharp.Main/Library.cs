@@ -19,7 +19,7 @@ namespace tdd_oop_inheritance.CSharp.Main
 
         public string checkIn(string title)
         {
-            List<AItem> filtered = (List<AItem>)this.items.Where(item => item.title.Equals(title));
+            List<AItem> filtered = this.items.Where(item => item.title.Equals(title)).ToList();
 
             if (filtered.Count() < 1)
             {
@@ -31,7 +31,7 @@ namespace tdd_oop_inheritance.CSharp.Main
 
         public string checkOut(string title)
         {
-            List<AItem> filtered = (List<AItem>)this.items.Where(item => item.title.Equals(title));
+            List<AItem> filtered = this.items.Where(item => item.title.Equals(title)).ToList();
 
             if (filtered.Count() < 1)
             {
