@@ -14,25 +14,7 @@ namespace tdd_oop_inheritance.CSharp.Main
             this.title = title;
         }
 
-        public override string checkIn() {
-            if (!this.isOnLoan()) {
-                return "item is not currently on loan";
-            }
 
-            this.onLoan = false;
-
-            return "item has been checked in";
-        }
-
-        public override string checkOut() {
-            if (this.isOnLoan()) {
-                return "item is currently on loan";
-            }
-
-            this.onLoan = true;
-
-            return "item has been checked out";
-        }
 
         public void addAuthor(Author author)
         {
